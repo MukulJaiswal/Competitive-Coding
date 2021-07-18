@@ -26,13 +26,16 @@ public class SpiralMatrix {
 
 			for (int i = 0; i < j ; i++)
 				arr[p++] = a[r--][c];
-
-			for (int i = 0; i < arr.length; i++)
-				System.out.println(arr[i]);
 			r++;
 			c++;
 		}
-		System.out.println(arr.length);
+		for (int i = 0; i < m; i++) {
+
+			for (int j = 0; j < m; j++) {
+				System.out.print(a[i][j] + "\t");
+			}
+			System.out.println();
+		}
 
 	}
 

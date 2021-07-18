@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class BalancedParenthesis {
 
-	static boolean isMatchingPair(char character1, char character2) {
+	 public static boolean isMatchingPair(char character1, char character2) {
 		if (character1 == '(' && character2 == ')')
 			return true;
 		else if (character1 == '{' && character2 == '}')
