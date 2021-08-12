@@ -37,12 +37,23 @@ class Parent {
 	void circle(Integer a) {
 		System.out.println(a);
 	}
+	
+	//Below methods are also example of polymorphism as there is a difference in parameters.
+	//By default display(int a) is called. In order to call other we need to cast it while calling like display((short)100)
+	void display(int a) { System.out.println("int : " + a); }
+	void display(short a) { System.out.println("short : " +a); }
+	void display(long a) { System.out.println("long : " +a); }
+	
 }
 
 class Child extends Parent {
+	/**Can we change the access modifier in method overriding. ? Yes, but with a condition
+	 * https://www.tutorialspoint.com/java-access-modifiers-with-method-overriding
+	 */
 	@Override
 	void display() {
 		System.out.println("In child class");
+
 	}
 	
 }
@@ -76,7 +87,7 @@ interface Q{
 		//If we want to give body of function in interface then
 		//that function must be declared as default or static
 		System.out.println("In Q");
-	}
+	  }
 }
 interface R{
 	void show();
@@ -239,7 +250,6 @@ class Encapsulation {
 		lLaptop.setPrice(10);
 		
 	}
-
 }
 
 //-------------------------Static block-----------------------
@@ -296,7 +306,7 @@ class StaticBlock{
 class Singleton{
 	
 	public String s;
-	public static Singleton getInstance = null;
+	public static  Singleton getInstance = null;
 	
 	private Singleton() {
 //		System.out.println("Singleton Constructor");
@@ -488,9 +498,9 @@ class SharedObj
  * Runnable, ActionListener and Comparable are functional Interfaces.
  * CopyOnWriteArrayList - https://www.geeksforgeeks.org/copyonwritearraylist-in-java/
  * https://www.geeksforgeeks.org/difference-arraylist-copyonwritearraylist/
- * Methods of Object Class -> hashcode, clone, toString, equals, wait, notify and notifyall - https://www.javatpoint.com/object-class
+ * Methods of Object Class -> hashcode, clone, finalize, toString, equals, wait, notify and notifyall - https://www.javatpoint.com/object-class
  * Thread implemention and why it is good to do with implementing Runnable Interface. -- Because we can extend only one class in Java --https://www.javatpoint.com/java-multithreading-interview-questions
- * Constructor cannot be final - https://www.geeksforgeeks.org/why-a-constructor-can-not-be-final-static-or-abstract-in-java/
+ * Constructor cannot be final - Yes cannot be final because contructors cannot be inherited in java- https://www.geeksforgeeks.org/why-a-constructor-can-not-be-final-static-or-abstract-in-java/
  * 
  */
 
@@ -498,13 +508,25 @@ class SharedObj
  * Altran
  * 
  * Internal Implementation of ArrayList --https://www.geeksforgeeks.org/internal-working-of-arraylist-in-java/
- * Immutable concept in depth.
+ * Immutable concept in depth. - https://www.geeksforgeeks.org/create-immutable-class-java/	
  * Runnable is used instead of thread because - https://stackoverflow.com/questions/15471432/why-implements-runnable-is-preferred-over-extends-thread
  * In the first approach, Our class always extends Thread class. There is no chance of extending any other class. Hence we are missing Inheritance benefits
  */
 
 
-
+/**
+ * Times Internet
+ * Can we use final with interfaces
+ * Three ways to iterate the HashMap
+ * If we use HashMap in synchronize block then it is a HashTable or not
+ * Remove duplicates from an array.
+ * Sort the list containing the Employee Object on empid and empid name.
+ * PriorityQueue in Java by default produces the Min Heap.
+ * Can we declare interface as a final in Java? No
+ * Does arraylist maintains the insertion order ? Yes it is a ordered collection.
+ * When to use arraylist and linkedlist? --https://www.geeksforgeeks.org/applications-of-linked-list-data-structure/
+ * Can we use private final together with function?Yes, but it does not make any sense.But no compilation error.
+ */
 
 
 

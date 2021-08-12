@@ -1,6 +1,7 @@
 package com.corejava.concept;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -27,44 +28,12 @@ class check3 extends A implements check1, check2 {}
 public class Test{
 
 	public static void main(String[] args) {
-		int x = 0;
-		A a = new A();
 		
-		a.display(x);
-		a.display(x,x);
-
-		List<Integer> list = new ArrayList<Integer>();
-		list.add(10);
-		list.add(20);
-		list.add(30);
-		list.add(40);
-		list.add(50);
-
-		for (Integer i : list) {
-			list.add(1000);
-			System.out.println(i);
-		}
-		System.out.println("------------");
+		String s = "I am   good    ";
+		String after = s.trim().replaceAll(" +", " ");
+		String str[] = after.split(" ");
+		System.out.println(Arrays.toString(str));
 		
-		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i));
-		}
-
-		System.out.println("------------AAA");
-		Iterator<Integer> iter = list.iterator();
-
-		while (iter.hasNext()) {
-			Integer str = iter.next();
-			
-			if(str == 50) {
-				iter.remove();
-				System.out.println(str  + "is removed");
-			}
-		}
-		
-		for (Integer i : list) {
-			System.out.println(i);
-		}
 	}
 }
 
