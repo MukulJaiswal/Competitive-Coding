@@ -526,6 +526,8 @@ class SharedObj
  * Does arraylist maintains the insertion order ? Yes it is a ordered collection.
  * When to use arraylist and linkedlist? --https://www.geeksforgeeks.org/applications-of-linked-list-data-structure/
  * Can we use private final together with function?Yes, but it does not make any sense.But no compilation error.
+ * Can interface be final? No
+ * Can interface be abstract ? Yes
  */
 
 
